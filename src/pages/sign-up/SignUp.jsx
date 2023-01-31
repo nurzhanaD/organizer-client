@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
-import './SignUp.css';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+
+import { Button } from '../../components/button/Button.jsx';
+import { Input } from '../../components/input/Input.jsx';
+
+import './SignUp.css';
 
 export function SignUp() {
 
@@ -16,25 +21,39 @@ export function SignUp() {
             "email": email,
             "_password": password
         }).then((res) => {
-            console.log(res.data[0]);
-        })
+            console.log(`user with id: ${res.data[0].user_id} was successfully registered`);
+        });
+
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPassword('');
     }
 
     return (
         <div className='sign-up'>
-            <h1 className='sign-up-title'>Добро пожаловать в "Органайзер"</h1>
+            <div className='sign-up-title'>Добро пожаловать в "Органайзер"</div>
             <form>
-                <h3>Зарегистрироваться</h3>
-                <label>Имя</label>
-                <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)} />
-                <label>Фамилия</label>
-                <input type="text" value={lastName} onChange={e => setLastName(e.target.value)} />
-                <label>Электронная почта</label>
-                <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
-                <label>Пароль</label>
-                <input type="text" value={password} onChange={e => setPassword(e.target.value)} />
-                <button type='button' onClick={() => signUp()}>Зарегистрироваться</button>
+                <div className="form-title">Зарегистрироваться</div>
+                <div className="form-item">
+                    <label>Имя:</label>
+                    <Input inputType='text' inputValue={firstName} inputOnChange={e => setFirstName(e.target.value)} inputStyle='input-sign-up'></Input>
+                </div>
+                <div className="form-item">
+                    <label>Фамилия:</label>
+                    <Input inputType='text' inputValue={lastName} inputOnChange={e => setLastName(e.target.value)} inputStyle='input-sign-up'></Input>
+                </div>
+                <div className="form-item">
+                    <label>Электронная почта:</label>
+                    <Input inputType='text' inputValue={email} inputOnChange={e => setEmail(e.target.value)} inputStyle='input-sign-up'></Input>
+                </div>
+                <div className="form-item">
+                    <label>Пароль:</label>
+                    <Input inputType='password' inputValue={password} inputOnChange={e => setPassword(e.target.value)} inputStyle='input-sign-up'></Input>
+                </div>
+                <Button btnClick={() => signUp()} btnTitle="Зарегистрироваться" btnStyle='btn-sign-up'></Button>
             </form>
+            <Link className="status" to="/sign-in">Если у вас уже есть аккаунт, можете зайти здесь.</Link>
         </div>
   )
 }
