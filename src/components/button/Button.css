@@ -1,0 +1,49 @@
+* {
+    font-family: 'ComfortaaBold';
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    border: 3px solid #000;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    box-shadow: 1px 8px 5px #cacaca;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+}
+
+button:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+}
+
+.btn-small {
+    width: 150px;
+}
+
+.btn-big {
+    width: 350px;
+}
+
+.btn-sign-up:hover {
+    box-shadow: 1px 8px 5px #668aae;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+}
+
+.btn-sign-up:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+}
