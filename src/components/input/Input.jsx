@@ -2,13 +2,16 @@ import React from 'react';
 import './Input.css';
 
 export function Input(props) {
+
     return (
-      <input 
-        type={props.inputType} 
-        value={props.inputValue} 
-        className={`${props.inputStyle}`}
-        onChange={props.inputOnChange}
-        placeholder={props.inputPlaceholder}
-      />
+        <div className="input-component">
+            <input 
+              type={props.type} 
+              value={props.value} 
+              className={`input ${props.classStyle}`}
+              onChange={props.change}
+              placeholder={props.placeholder}
+            />
+        </div>
   )
 }

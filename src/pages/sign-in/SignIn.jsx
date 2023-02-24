@@ -1,7 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-export function SignIn() {
-  return (
-    <div>SignIn Page</div>
-  )
+import { Input } from '../../components/input/Input.jsx';
+import { Button } from '../../components/button/Button.jsx';
+
+import './SignIn.css';
+
+export function SignIn(props) {
+    const navigate = useNavigate();
+
+    const [statusFail, setStatusFail] = useState(false);
+    const [statusSuccess, setStatusSuccess] = useState(false);
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    
+    function signIn() {
+        axios.post('https://organizer-server.onrender.com/api/signInUser', {
+            "email": email,
+            "_password": password
+        }).then((res) => {
+            if (res.data[0] === undefined) {
+                setStatusFail(true);
+                setStatusSuccess(false);
+            } else {
+                setStatusSuccess(true);
+                setStatusFail(false);
+                localStorage.setItem('lastSignedInUser', res.data[0].user_id);
+                setEmail('');
+                setPassword('');
+                navigate('/my-profile');
+                window.location.reload();
+            }
+        });
+
+    }
+
+    return (
+        <div className="sign-in">
+            <div className="sign-in__title">Добро пожаловать в "Органайзер"!</div>
+            <form className="sign-in__form">
+                <div className="sign-in-form__title">Войти</div>
+                <div className="sign-in-form__item">
+                    <label className="sign-in-form__label">Электронная почта:</label>
+                    <Input type='text' value={email} change={e => setEmail(e.target.value)} classStyle='input-sign'></Input>
+                </div>
+                <div className="sign-in-form__item">
+                    <label className="sign-in-form__label">Пароль:</label>
+                    <Input type='password' value={password} change={e => setPassword(e.target.value)} classStyle='input-sign'></Input>
+                </div>
+                <Button title='Войти' classStyle='btn-sign' click={() => signIn()}></Button>
+                <div className={statusSuccess ? 'success' : statusFail ? 'required' : 'default'}>{statusSuccess ? 'Вы вошли успешно' : statusFail ? 'Проверьте правильность введённых данных.' : ''}</div>
+                <Link className="sign-up-link" to="/">Если у вас ещё нет аккаунта, вы можете зарегистрироваться здесь.</Link>
+            </form>
+        </div>
+    )
+
 }

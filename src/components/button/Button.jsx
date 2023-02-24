@@ -5,8 +5,8 @@ export function Button(props) {
     return (
         <button 
             type="button" 
-            className={`${props.btnStyle}`}
-            onClick={props.btnClick}
-        >{props.btnTitle}</button>
+            className={`btn ${props.classStyle}`}
+            onClick={props.click}
+        >{props.title}</button>
     )
 }

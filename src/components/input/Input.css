@@ -1,4 +1,4 @@
-input {
+.input {
     width: 500px;
     height: 50px;
     border: 3px solid #000;
@@ -30,12 +30,17 @@ input:hover {
     width: 590px;
 }
 
-.input-sign-up:focus {
+.input-sign:focus {
     box-shadow: 1px 8px 5px #668aae;
 }
 
-.input-sign-up:hover {
+.input-sign:hover {
     box-shadow: 1px 8px 5px #668aae;
     transition-property: box-shadow;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
+}
+
+.required {
+    color: red;
+    font-size: 12px;
 }

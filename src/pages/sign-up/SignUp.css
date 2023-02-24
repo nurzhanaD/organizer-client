@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-label {
+.sign-up-form__label {
     width: 100%;
     display: block;
     box-sizing: border-box;
@@ -16,45 +16,68 @@ label {
     text-align: start;
 }
 
-.sign-up-title {
+.sign-up__title {
     font-size: 48px;
     font-family: 'ComfortaaRegular';
 }
 
-.form-title {
+.sign-up-form__title {
     font-size: 32px;
     font-family: 'ComfortaaBold';
 }
 
-form {
-    width: 600px;
-    height: 550px;
+.sign-up__form {
+    width: 1200px;
+    height: 500px;
     background-color: #a8c9ea;
     border-radius: 20px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
 }
 
-.form-item {
+.sign-up-form__wrapper {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up-form__item {
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
 }
 
-.status {
+.sign-in-link {
     font-size: 12px;
-    color: #cacaca;
+    color: #909090;
     transition-property: color;
     transition-duration: 0.2s;
 }
 
-.status:hover {
-    color: #909090;
+.sign-in-link:hover {
+    color: #6a6a6a;
     transition-property: color;
     transition-duration: 0.2s;
+}
+
+.required {
+    color: red;
+    font-size: 12px;
+    height: 12px;
+}
+
+.success {
+    color: green;
+    font-size: 12px;
+    height: 12px;
+}
+
+.default {
+    height: 12px;
 }

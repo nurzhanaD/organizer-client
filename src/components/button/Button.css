@@ -2,7 +2,7 @@
     font-family: 'ComfortaaBold';
 }
 
-button {
+.btn {
     width: 250px;
     height: 50px;
     border-radius: 8px;
@@ -16,13 +16,13 @@ button {
     transition-duration: 0.5s;
 }
 
-button:hover {
+.btn:hover {
     box-shadow: 1px 8px 5px #cacaca;
     transition-property: box-shadow;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
-button:active {
+.btn:active {
     box-shadow: none;
     transition-property: box-shadow;
     transition-duration: 0.2s;
@@ -36,13 +36,13 @@ button:active {
     width: 350px;
 }
 
-.btn-sign-up:hover {
+.btn-sign:hover {
     box-shadow: 1px 8px 5px #668aae;
     transition-property: box-shadow;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
 }
 
-.btn-sign-up:active {
+.btn-sign:active {
     box-shadow: none;
     transition-property: box-shadow;
     transition-duration: 0.2s;
