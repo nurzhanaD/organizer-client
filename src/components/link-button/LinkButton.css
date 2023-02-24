@@ -1,0 +1,24 @@
+.link-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    text-decoration: underline;
+    text-shadow: none;
+    cursor: pointer;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+}
+
+.link-btn:hover {
+    text-shadow: 0 5px 0.2em #929292;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+}
+
+.link-btn:active {
+    text-shadow: none;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.2s;
+}
