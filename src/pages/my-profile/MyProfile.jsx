@@ -100,11 +100,11 @@ export function MyProfile() {
                         <img src={userProfileImage} alt="profile" />
                     </div>
                     <div className="my-profile-user-profile-img__item">
-                        <LinkButton title={editProfileImageURLStatus ? 'Отменить' : 'Изменить изображение'} textColor={editProfileImageURLStatus ? '#000' : '#7AA7D2'} click={() => toggleEditProfileImageURLStatus()}/>
+                        <LinkButton title={editProfileImageURLStatus ? 'Отменить' : 'Изменить изображение'} classStyle='link-btn' textColor={editProfileImageURLStatus ? '#000' : '#7AA7D2'} click={() => toggleEditProfileImageURLStatus()}/>
                         { editProfileImageURLStatus ?
                             <div className="edit-profile-img">
                                 <Input type='text' value={editProfileImageURL} change={(e) => setEditProfileImageStatusURL(e.target.value)} />
-                                <LinkButton title='Готово' textColor='#7AA7D2' click={() => updateUserProfileImageURL()}/>
+                                <LinkButton title='Готово' textColor='#7AA7D2' classStyle='link-btn' click={() => updateUserProfileImageURL()}/>
                             </div>
                             :
                             <div></div>
@@ -118,27 +118,27 @@ export function MyProfile() {
                             {editFirstNameStatus ? 
                                 <div className="my-profile__edit">
                                     <Input type='text' value={editFirstName} change={(e) => setEditFirstName(e.target.value)}/>
-                                    <LinkButton title='Готово' textColor='#7AA7D2' click={() => updateUserFirstName()}/>
+                                    <LinkButton title='Готово' textColor='#7AA7D2' classStyle='link-btn' click={() => updateUserFirstName()}/>
                                 </div>
                                 :
                                 <div className="my-profile__user-data"> 
                                     <span className='my-profile__underline'>Имя:</span> {userFirstName}
                                 </div> 
                             }
-                            <LinkButton title={editFirstNameStatus ? 'Отменить' : 'Изменить'} textColor={editFirstNameStatus ? '#000' : '#7AA7D2'} click={() => toggleEditFirstNameStatus()}/>
+                            <LinkButton title={editFirstNameStatus ? 'Отменить' : 'Изменить'} textColor={editFirstNameStatus ? '#000' : '#7AA7D2'} classStyle='link-btn' click={() => toggleEditFirstNameStatus()}/>
                         </div>
                         <div className="my-profile-wrapper__item">
                             {editLastNameStatus ? 
                                 <div className="my-profile__edit">
                                     <Input type='text' value={editLastName} change={(e) => setEditLastName(e.target.value)}/>
-                                    <LinkButton title='Готово' textColor='#7AA7D2' click={() => updateUserLastName()}/>
+                                    <LinkButton title='Готово' classStyle='link-btn' textShadowColor='#929292' click={() => updateUserLastName()}/>
                                 </div>
                                 :
                                 <div className="my-profile__user-data"> 
                                     <span className='my-profile__underline'>Фамилия:</span> {userLastName}
                                 </div> 
                             }
-                            <LinkButton title={editLastNameStatus ? 'Отменить' : 'Изменить'} textColor={editLastNameStatus ? '#000' : '#7AA7D2'} click={() => toggleEditLastNameStatus()}/>
+                            <LinkButton title={editLastNameStatus ? 'Отменить' : 'Изменить'} textColor={editLastNameStatus ? '#000' : '#7AA7D2'} classStyle='link-btn' click={() => toggleEditLastNameStatus()}/>
                         </div>
                         <div className="my-profile-wrapper__item">
                             <div className="my-profile__user-data">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Home } from './pages/home/Home.jsx';
 import { SignUp } from './pages/sign-up/SignUp.jsx';
 import { SignIn } from './pages/sign-in/SignIn.jsx';
 import { MyGoals } from './pages/my-goals/MyGoals.jsx';
@@ -22,6 +23,7 @@ export default function App() {
     return (
         <div className='app'>
             <Routes>
+                <Route path='/' element={automateSignIn() ? null : <Home />} ></Route>
                 <Route path='/sign-up' element={ automateSignIn() ? null : <SignUp />} ></Route>
                 <Route path='/sign-in' element={ automateSignIn() ? null : <SignIn/>} ></Route>
                 <Route path='/my-goals' element={ automateSignIn() ? <MyGoals /> : null} ></Route>
