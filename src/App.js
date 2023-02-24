@@ -22,7 +22,7 @@ export default function App() {
     return (
         <div className='app'>
             <Routes>
-                <Route path='/' element={ automateSignIn() ? null : <SignUp />} ></Route>
+                <Route path='/sign-up' element={ automateSignIn() ? null : <SignUp />} ></Route>
                 <Route path='/sign-in' element={ automateSignIn() ? null : <SignIn/>} ></Route>
                 <Route path='/my-goals' element={ automateSignIn() ? <MyGoals /> : null} ></Route>
                 <Route path='/calendar' element={ automateSignIn() ? <Calendar/> : null}></Route>

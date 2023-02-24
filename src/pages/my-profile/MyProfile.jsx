@@ -77,7 +77,7 @@ export function MyProfile() {
 
     function signOut() {
         localStorage.setItem('lastSignedInUser', '');
-        navigate('/');
+        navigate('/sign-up');
         window.location.reload();
     }
 

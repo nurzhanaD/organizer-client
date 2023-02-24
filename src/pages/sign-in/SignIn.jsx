@@ -52,7 +52,7 @@ export function SignIn(props) {
                 </div>
                 <Button title='Войти' classStyle='btn-sign' click={() => signIn()}></Button>
                 <div className={statusSuccess ? 'success' : statusFail ? 'required' : 'default'}>{statusSuccess ? 'Вы вошли успешно' : statusFail ? 'Проверьте правильность введённых данных.' : ''}</div>
-                <Link className="sign-up-link" to="/">Если у вас ещё нет аккаунта, вы можете зарегистрироваться здесь.</Link>
+                <Link className="sign-up-link" to="/sign-up">Если у вас ещё нет аккаунта, вы можете зарегистрироваться здесь.</Link>
             </form>
         </div>
     )
