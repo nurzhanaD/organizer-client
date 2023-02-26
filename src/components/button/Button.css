@@ -59,3 +59,9 @@
     transition-property: box-shadow;
     transition-duration: 0.2s;
 }
+
+@media (max-width: 420px) {
+    .btn {
+        color: #000;
+    }
+}
