@@ -17,10 +17,10 @@ import NavigateToMyProfilePage from './pages/navigateToMyProfilePage/NavigateToM
 
 export default function App() {
     function automateSignIn() {
-        if (localStorage.getItem('lastSignedInUser') !== '') {
-            return true;
-        } else {
+        if (localStorage.getItem('lastSignedInUser') === '' || localStorage.getItem('lastSignedInUser') === null) {
             return false;
+        } else {
+            return true;
         }
     }
 
