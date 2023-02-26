@@ -6,7 +6,9 @@ export default function History() {
     return (
         <div>
             <NavBar />
-            history
+            <div className="history">
+                History
+            </div>
         </div>
     )
 }
