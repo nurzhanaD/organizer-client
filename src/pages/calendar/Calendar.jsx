@@ -4,7 +4,7 @@ import { NavBar } from '../../components/nav/NavBar.jsx';
 
 import './Calendar.css';
 
-export function Calendar() {
+export default function Calendar() {
     return (
         <div>
             <NavBar/>

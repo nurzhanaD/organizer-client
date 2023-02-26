@@ -5,7 +5,7 @@ import { LinkButton } from '../../components/link-button/LinkButton.jsx';
 
 import './Home.css';
 
-export function Home() {
+export default function Home() {
     const navigate = useNavigate();
 
     function navigateToSignUpPage() {
@@ -23,8 +23,8 @@ export function Home() {
             </div>
             <div className="home__title">Органайзер</div>
             <div className="home__buttons">
-                <LinkButton title='Зарегистрироваться' classStyle='link-btn-secondary' textColor='#fff' click={() => navigateToSignUpPage()}/>
-                <LinkButton title='Войти в профиль' classStyle='link-btn-secondary' textColor='#fff' click={() => navigateToSignInPage()}/>
+                <LinkButton title='Зарегистрироваться' classStyle='link-btn-tertiary' textColor='#fff' click={() => navigateToSignUpPage()}/>
+                <LinkButton title='Войти в профиль' classStyle='link-btn-tertiary' textColor='#fff' click={() => navigateToSignInPage()}/>
             </div>
         </div>
     )

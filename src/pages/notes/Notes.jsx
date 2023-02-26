@@ -4,7 +4,7 @@ import { NavBar } from '../../components/nav/NavBar';
 
 import './Notes.css';
 
-export function Notes() {
+export default function Notes() {
     return (
         <div>
             <NavBar/>

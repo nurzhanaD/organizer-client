@@ -7,7 +7,7 @@ import { Input } from '../../components/input/Input.jsx';
 
 import './SignUp.css';
 
-export function SignUp() {
+export default function SignUp() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -79,7 +79,7 @@ export function SignUp() {
                         <Input type='password' value={password} change={e => setPassword(e.target.value)} classStyle='input-sign'></Input>
                     </div>
                 </div>
-                <Button click={() => signUp()} title="Зарегистрироваться" classStyle='btn-sign'></Button>
+                <Button click={() => signUp()} title="Зарегистрироваться" classStyle='btn-secondary'></Button>
                 <div className={requiredWarning ? 'required' : successfulSignUp ? 'success' : 'default'}>
                     {requiredWarning ? 'Все поля обязательны для заполнения.' : ''}
                     {successfulSignUp ? 'Вы были успешно зарегистрированы.' : ''}

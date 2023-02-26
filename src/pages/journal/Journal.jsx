@@ -4,7 +4,7 @@ import { NavBar } from '../../components/nav/NavBar';
 
 import './Journal.css';
 
-export function Journal() {
+export default function Journal() {
     return (
         <div>
             <NavBar/>

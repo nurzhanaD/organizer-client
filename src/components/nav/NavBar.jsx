@@ -25,6 +25,7 @@ export function NavBar() {
             <NavLink className='link' style={({ isActive }) => ({textDecoration : isActive ? 'underline' : 'none'})} to='/journal' >Дневник</NavLink>
             <NavLink className='link' style={({ isActive }) => ({textDecoration : isActive ? 'underline' : 'none'})} to='/relaxing' >Дыхание</NavLink>
             <NavLink className='link' style={({ isActive }) => ({textDecoration : isActive ? 'underline' : 'none'})} to='/notes' >Заметки</NavLink>
+            <NavLink className='link' style={({ isActive }) => ({textDecoration : isActive ? 'underline' : 'none'})} to='/history' >История</NavLink>
             <NavLink className='link navbar__my-profile-link' style={({ isActive }) => ({textDecoration : isActive ? 'underline' : 'none'})} to='/my-profile' >
                 <img className='navbar__profile-img' src={profileImage} alt={profileImage} />
                 Мой профиль

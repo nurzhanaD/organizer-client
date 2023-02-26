@@ -1,0 +1,41 @@
+.relaxing {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-color: #A8C9EA;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.relaxing__title {
+    width: 95%;
+    height: 40px;
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+.relaxing__guide-wrapper {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0 25px 0;
+}
+
+.relaxing__guide {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relaxing-guide__icon {
+    width: 100px;
+    height: 100px;
+    filter: invert(67%) sepia(47%) saturate(391%) hue-rotate(173deg) brightness(89%) contrast(83%);
+}

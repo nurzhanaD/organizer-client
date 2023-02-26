@@ -7,7 +7,7 @@ import { Button } from '../../components/button/Button.jsx';
 
 import './SignIn.css';
 
-export function SignIn(props) {
+export default function SignIn(props) {
     const navigate = useNavigate();
 
     const [statusFail, setStatusFail] = useState(false);
@@ -50,7 +50,7 @@ export function SignIn(props) {
                     <label className="sign-in-form__label">Пароль:</label>
                     <Input type='password' value={password} change={e => setPassword(e.target.value)} classStyle='input-sign'></Input>
                 </div>
-                <Button title='Войти' classStyle='btn-sign' click={() => signIn()}></Button>
+                <Button title='Войти' classStyle='btn-secondary' click={() => signIn()}></Button>
                 <div className={statusSuccess ? 'success' : statusFail ? 'required' : 'default'}>{statusSuccess ? 'Вы вошли успешно' : statusFail ? 'Проверьте правильность введённых данных.' : ''}</div>
                 <Link className="sign-up-link" to="/sign-up">Если у вас ещё нет аккаунта, вы можете зарегистрироваться здесь.</Link>
             </form>

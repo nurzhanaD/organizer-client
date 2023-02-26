@@ -9,7 +9,7 @@ import { Input } from '../../components/input/Input.jsx';
 
 import './MyProfile.css';
 
-export function MyProfile() {
+export default function MyProfile() {
     const navigate = useNavigate();
 
     const [editFirstNameStatus, setEditFirstNameStatus] = useState(false);
@@ -77,7 +77,7 @@ export function MyProfile() {
 
     function signOut() {
         localStorage.setItem('lastSignedInUser', '');
-        navigate('/sign-up');
+        navigate('/');
         window.location.reload();
     }
 

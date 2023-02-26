@@ -36,13 +36,25 @@
     width: 350px;
 }
 
-.btn-sign:hover {
-    box-shadow: 1px 8px 5px #668aae;
+.btn-secondary:hover {
+    box-shadow: 1px 8px 5px #5383b4;
     transition-property: box-shadow;
     transition-duration: 0.3s;
 }
 
-.btn-sign:active {
+.btn-secondary:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+}
+
+.btn-tertiary:hover {
+    box-shadow: 1px 8px 5px #81a3c5;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-tertiary:active {
     box-shadow: none;
     transition-property: box-shadow;
     transition-duration: 0.2s;

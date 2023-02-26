@@ -4,7 +4,7 @@ import { NavBar } from '../../components/nav/NavBar';
 
 import './ToDoList.css';
 
-export function ToDoList() {
+export default function ToDoList() {
     return (
         <div>
             <NavBar/>

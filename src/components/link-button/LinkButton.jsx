@@ -3,7 +3,7 @@ import './LinkButton.css';
 
 export function LinkButton(props) {
     return (
-        <button className={props.classStyle} onClick={props.click} 
+        <button className={`link-btn ${props.classStyle}`} onClick={props.click} 
             style={
                 {
                     color : props.textColor
