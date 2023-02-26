@@ -3,7 +3,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-direction: column;
     text-align: center;
 }
@@ -11,6 +11,7 @@
 .sign-up__title {
     font-size: 48px;
     font-family: 'ComfortaaRegular';
+    margin-top: 80px;
 }
 
 .sign-up-form__title {
@@ -36,6 +37,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 .sign-up-form__wrapper {
@@ -84,7 +86,8 @@
 
 @media (max-width: 420px) {
     .sign-up__title {
-        font-size: 32px;
+        font-size: 28px;
+        margin-top: 40px;
     }
 
     .sign-up-form__title {
@@ -106,6 +109,7 @@
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
+        margin-top: 40px;
     }
 
     .sign-up-form__wrapper {

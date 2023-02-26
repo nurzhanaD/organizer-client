@@ -3,13 +3,14 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
 .sign-in__title {
     font-size: 48px;
     font-family: 'ComfortaaRegular';
+    margin-top: 80px;
 }
 
 .sign-in__form {
@@ -22,6 +23,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 .sign-in-form__label {
@@ -61,18 +63,72 @@
 
 @media (max-width: 420px) {
     .sign-in__title {
-        font-size: 32px;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .sign-in-form__title {
+        font-size: 18px;
+    }
+
+    .sign-in-form__label {
+        font-size: 16px;
+        width: 300px;
     }
 
     .sign-in__form {
-        width: 100px;
-        height: 500px;
+        width: 300px;
+        height: 350px;
         background-color: #a8c9ea;
-        border-radius: 20px;
+        border-radius: 15px;
         box-sizing: border-box;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .sign-in-form__item {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .input {
+        width: 250px;
+        height: 35px;
+        border-radius: 8px;
+    }
+
+    .btn {
+        width: 250px;
+        height: 35px;
+        border-radius: 8px;
+    }
+
+    .sign-up-link {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .required {
+        color: red;
+        font-size: 10px;
+        height: 10px;
+    }
+    
+    .success {
+        color: green;
+        font-size: 10px;
+        height: 10px;
+    }
+    
+    .default {
+        height: 10px;
     }
 }
