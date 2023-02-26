@@ -31,6 +31,24 @@
     margin-top: 50px;
 }
 
-@media screen {
-    
+@media (max-width: 400px) {
+
+    .home-cover__img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home__title {
+        font-size: 42px;
+    }
+
+    .home__buttons {
+        width: 400px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 50px;
+    }
 }
