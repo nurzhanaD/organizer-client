@@ -1,0 +1,103 @@
+@import url('https://cdn-icons-png.flaticon.com/512/7893/7893163.png');
+@import url('https://cdn-icons-png.flaticon.com/512/12946/12946121.png');
+
+.links {
+    width: 100vw;
+    height: 50px;
+    background-color: #7AA7D2;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1000;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #e4e4e4;
+}
+
+.link:active {
+    color: #cacaca;
+}
+
+.navbar__profile-img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #fff;
+    object-fit: cover;
+}
+
+.navbar__my-profile-link {
+    width: 170px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-btn {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .links {
+        width: 270px;
+        height: 350px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #slide-out {
+        transition: all 0.75s ease;
+    }
+    
+    #fade-in {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.75s ease;
+    }
+
+    .navbar__my-profile-link {
+        height: auto;
+    }
+
+    .burger-btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        transition: all 0.3s ease;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .burger-btn__close {
+        margin-left: 230px;
+        background-image: url('https://cdn-icons-png.flaticon.com/512/12946/12946121.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 10000;
+    }
+    
+    .burger-btn__open {
+        background-image: url('https://cdn-icons-png.flaticon.com/512/7893/7893163.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}

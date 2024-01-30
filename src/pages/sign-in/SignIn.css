@@ -1,0 +1,152 @@
+.sign-in {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sign-in__title {
+    font-size: 50px;
+    color: #000;
+    margin: 8vh 0;
+    text-align: center;
+}
+
+.sign-in__form {
+    width: 600px;
+    height: 450px;
+    background-color: var(--bg-color-light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.sign-in-form__title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sign-in-form__wrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.sign-in-form__item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sign-in-form__label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-left: calc((100% - 450px) / 2);
+}
+
+.sign-in-form__item > input {
+    width: 450px;
+    height: 45px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: calc((100% - 450px) / 2);
+}
+
+.sign-in__form > button {
+    width: 250px;
+    height: 45px;
+    border: 3px solid #000;
+    border-radius: 8px;
+}
+
+.sign-up-link {
+    font-size: 12px;
+    color: var(--grey-text);
+    text-align: center;
+}
+
+@media (max-width: 957px) {
+    .sign-in__title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 643px) {
+    .sign-in__title {
+        font-size: 28px;
+        padding: 0 10px;
+        margin: 4vh 0;
+    }
+
+    .sign-in-form__label {
+        margin-left: calc((100% - 85%) / 2);
+    }
+
+    .sign-in__form {
+        width: 85%;
+    }
+
+    .sign-in-form__title {
+        font-size: 24px;
+    }
+
+    .sign-in-form__item > input {
+        width: 80%;
+        margin: 0;
+        align-self: center;
+        border: 2px solid #000;
+    }
+
+    .sign-in__form > button {
+        border: 2px solid #000;
+    }
+
+    .sign-up-link {
+        font-size: 10px;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 345px) {
+    .sign-in__title {
+        font-size: 22px;
+        margin: 2vh 0;
+    }
+
+    .sign-in-form__title {
+        font-size: 20px;
+    }
+
+    .sign-in__form {
+        height: 350px;
+    }
+
+    .sign-in-form__item > input {
+        width: 80%;
+        height: 35px;
+        border: 2px solid #000;
+    }
+
+    .sign-in__form > button {
+        height: 35px;
+        width: 85%;
+        border: 2px solid #000;
+    }
+
+    .sign-up-link {
+        font-size: 8px;
+    }
+}

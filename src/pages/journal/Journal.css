@@ -1,0 +1,309 @@
+.journal {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-color: #A8C9EA;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.journal__title {
+    width: 95%;
+    height: 40px;
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+.journal__form {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.journal-form__wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.journal-form__item {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.journal-form__item-sec {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-form-item-sec__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.journal-form-item__select {
+    width: 100%;
+    height: 50px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 8px;
+    text-indent: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 15px;
+    box-sizing: content-box;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/57/57055.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    background-size: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+}
+
+.journal-form-item__textarea {
+    width: 100%;
+    height: 80%;
+    display: block;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 1em;
+    margin-top: 5px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+}
+
+.journal__btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.journal__date {
+    width: 95%;
+    display: block;
+    text-align: end;
+    font-size: 24px;
+    color: #fff;
+}
+
+.journal-form__item > input {
+    width: 100%;
+    height: 50px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.btn-journal {
+    width: 100%;
+    height: 50px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.journal__btns > button {
+    width: 40%;
+    height: 50px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.journal-form-item__q {
+    width: 100%;
+    font-size: 18px;
+}
+
+.journal-form-item__a {
+    font-size: 18px;
+}
+
+@media (max-width: 1302px) {
+    .journal__form {
+        padding: 35px;
+    }
+
+    .journal-form-item__q {
+        font-size: 16px;
+    }
+
+    .journal-form__item > input {
+        font-size: 16px;
+    }
+
+    .journal-form-item__select {
+        font-size: 16px;
+    }
+
+    .journal-form-item__textarea {
+        font-size: 16px;
+    }
+
+    .journal-form__item > input {
+        font-size: 16px;
+    }
+
+    .btn-journal {
+        font-size: 16px;
+    }
+
+    .journal__btns > button {
+        font-size: 16px;
+    }
+
+    .journal__date {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .journal {
+        height: 100vh;
+    }
+
+    .journal__title {
+        text-align: center;
+        font-size: 32px;
+        margin: 10px 0;
+    }
+
+    .journal__form {
+        width: 90%;
+        min-height: 350px;
+        flex-direction: column;
+        overflow: scroll;
+        border: 3px solid #fff;
+        border-radius: 15px;
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .journal-form__wrapper {
+        width: 100%;
+        min-height: 450px;
+        margin: 20px 0;
+    }
+
+    .journal-form__item {
+        width: 95%;
+    }
+
+    .journal-form-item__textarea {
+        min-height: 350px;
+        font-size: 14px;
+    }
+
+    .journal-form-item__q {
+        font-size: 14px;
+    }
+
+    .journal-form__item > input {
+        font-size: 14px;
+    }
+
+    .journal-form-item__select {
+        font-size: 14px;
+    }
+
+    .journal-form__item > input {
+        font-size: 14px;
+    }
+
+    .btn-journal {
+        font-size: 14px;
+    }
+
+    .journal__btns > button {
+        font-size: 14px;
+    }
+
+    .journal__date {
+        font-size: 14px;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 532px) {
+    .journal-form__wrapper {
+        min-height: 400px;
+    }
+
+    .journal-form-item__textarea {
+        min-height: 300px;
+        font-size: 12px;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .journal__title {
+        font-size: 28px;
+    }
+
+    .journal-form-item__q {
+        font-size: 12px;
+    }
+
+    .journal-form__item > input {
+        font-size: 12px;
+    }
+
+    .journal-form-item__select {
+        height: 40px;
+        font-size: 12px;
+        border: 2px solid #000;
+        background-size: 15px;
+        border-radius: 8px;
+    }
+
+    .journal-form__item > input {
+        height: 40px;
+        font-size: 12px;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .btn-journal {
+        height: 40px;
+        font-size: 12px;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .journal__btns > button {
+        height: 40px;
+        font-size: 12px;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .journal__date {
+        font-size: 10px;
+    }
+}

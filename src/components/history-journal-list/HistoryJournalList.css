@@ -1,0 +1,67 @@
+.history-journal-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.history-journal-list__Qs {
+    width: 50%;
+}
+
+.history-journal-list__As {
+    width: 50%;
+}
+
+.history-journal-list__q {
+    height: 70px;
+    font-size: 16px;
+    color: #909090;
+}
+
+.history-journal-list__a {
+    min-height: 70px;
+    font-size: 16px;
+    color: #000;
+}
+
+.my-day {
+    word-wrap: break-word;
+}
+
+.empty-q-info {
+    font-size: 16px;
+    color: #A8C9EA;
+}
+
+@media (max-width: 992px) {
+    .history-journal-list__As {
+        text-align: end;
+    }
+
+    .history-journal-list__q {
+        font-size: 14px;
+    }
+
+    .history-journal-list__a {
+        font-size: 14px;
+    }
+
+    .empty-q-info {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 532px) {
+    .history-journal-list__q {
+        font-size: 12px;
+    }
+
+    .history-journal-list__a {
+        font-size: 12px;
+    }
+
+    .empty-q-info {
+        font-size: 12px;
+    }
+}

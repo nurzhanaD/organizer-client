@@ -1,0 +1,43 @@
+:root {
+    --bg-color-light: #A8C9EA;
+    --bg-color-dark: #7AA7D2;
+    --light-color-shadow: #7696b7;
+    --dark-color-shadow: #4d7296;
+    --white-color-shadow: #909090;
+    --grey-text: #909090;
+}
+
+@font-face {
+    font-family: 'ComfortaaLight';
+    src: url('./assets/fonts/Comfortaa/static/Comfortaa-Light.ttf');
+}
+
+@font-face {
+    font-family: 'ComfortaaRegular';
+    src: url('./assets/fonts/Comfortaa/static/Comfortaa-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'ComfortaaMedium';
+    src: url('./assets/fonts/Comfortaa/static/Comfortaa-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'ComfortaaBold';
+    src: url('./assets/fonts/Comfortaa/static/Comfortaa-Bold.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'ComfortaaRegular';
+}
+
+.required {
+    color: red;
+    font-size: 12px;
+}
+
+.success {
+    color: green;
+}

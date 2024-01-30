@@ -1,0 +1,60 @@
+button {
+    background-color: #fff;
+    cursor: pointer;
+    box-sizing: content-box;
+    color: #000;
+}
+
+.btn-white-bg {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-white-bg:hover {
+    box-shadow: 0 5px 10px var(--white-color-shadow);
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-white-bg:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-light-bg {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-light-bg:hover {
+    box-shadow: 0 5px 10px var(--light-color-shadow);
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-light-bg:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-dark-bg {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-dark-bg:hover {
+    box-shadow: 0 5px 10px var(--dark-color-shadow);
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}
+
+.btn-dark-bg:active {
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+}

@@ -1,0 +1,45 @@
+.pick-date-form {
+    width: 250px;
+    height: 30px;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pick-date-form__select {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.select__date {
+    width: 35px;
+}
+
+.select__month {
+    width: 35px;
+}
+
+.select__year {
+    width: 55px;
+}
+
+.pick-date-form__select::after {
+    color: #fff;
+}
+
+.slash {
+    color: #fff;
+}
+
+@media (max-width: 532px) {
+    .pick-date-form {
+        width: 100%;
+    }
+}

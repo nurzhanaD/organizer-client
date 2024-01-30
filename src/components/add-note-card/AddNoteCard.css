@@ -1,0 +1,77 @@
+.add-note-card {
+    width: 95%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #000;
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+}
+
+.add-note-card:hover {
+    box-shadow: 1px 8px 5px #81a3c5;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+}
+
+.add-note-card__content {
+    width: 90%;
+    height: 80%;
+    margin-top: 20px;
+    border: none;
+    resize: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.add-note-card__counter-btn-wrapper {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-note-card__counter-btn-wrapper > .link-btn > .link-btn__title {
+    font-size: 16px;
+}
+
+.add-note-card__counter {
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    .add-note-card__content {
+        font-size: 16px;
+    }
+
+    .add-note-card__counter-btn-wrapper > .link-btn > .link-btn__title {
+        font-size: 14px;
+    }
+    
+    .add-note-card__counter {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 532px) {
+    .add-note-card {
+        border: 2px solid #000;
+    }
+
+    .add-note-card__content {
+        font-size: 14px;
+    }
+
+    .add-note-card__counter-btn-wrapper > .link-btn > .link-btn__title {
+        font-size: 12px;
+    }
+    
+    .add-note-card__counter {
+        font-size: 12px;
+    }
+} 

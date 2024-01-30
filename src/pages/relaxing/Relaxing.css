@@ -1,0 +1,148 @@
+.relaxing {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-color: #A8C9EA;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.relaxing__title {
+    width: 95%;
+    height: 40px;
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+.relaxing__guide-wrapper {
+    width: 530px;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.relaxing__guide {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(1px 10px 10px #5383b4);
+    transition-property: width, height, filter;
+    transition-duration: 1s;
+    font-size: 18px;
+}
+
+.relaxing-guide__icon {
+    width: 100px;
+    height: 100px;
+    filter: invert(67%) sepia(47%) saturate(391%) hue-rotate(173deg) brightness(89%) contrast(83%);
+}
+
+.inhale {
+    width: 500px;
+    height: 500px;
+    filter: none;
+    font-size: 24px;
+    transition-property: width, height, filter, font-size;
+    transition-duration: 4s;
+}
+
+.exhale {
+    width: 250px;
+    height: 250px;
+    filter: drop-shadow(1px 10px 10px #5383b4);
+    font-size: 18px;
+    transition-property: width, height, filter, font-size;
+    transition-duration: 4s;
+}
+
+.relaxing > button {
+    width: 180px;
+    height: 50px;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    margin-bottom: 4em;
+}
+
+@media (max-width: 992px) {
+    .relaxing {
+        height: 100vh;
+        justify-content: space-between;
+    }
+
+    .relaxing__title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 532px) {
+    .relaxing > button {
+        width: 80%;
+        height: 40px;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .relaxing__title {
+        font-size: 28px;
+    }
+
+    .relaxing__guide {
+        width: 180px;
+        height: 180px;
+    }
+
+    .inhale {
+        width: 340px;
+        height: 340px;
+        font-size: 18px;
+    }
+    
+    .exhale {
+        width: 180px;
+        height: 180px;
+        font-size: 12px;
+    }
+
+    .relaxing__guide-wrapper {
+        width: 375px;
+        height: 375px;
+    }
+    
+    .relaxing-guide__icon {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .relaxing__guide {
+        width: 120px;
+        height: 120px;
+    }
+
+    .inhale {
+        width: 220px;
+        height: 220px;
+    }
+
+    .exhale {
+        width: 120px;
+        height: 120px;
+    }
+
+    .relaxing__guide-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+}

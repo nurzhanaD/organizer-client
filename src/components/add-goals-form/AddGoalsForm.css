@@ -1,0 +1,221 @@
+.add-goals {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-color: #A8C9EA;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.add-goals__title {
+    width: 95%;
+    height: 40px;
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+.add-goals__form {
+    width: 95%;
+    height: 500px;
+    background-color: #7AA7D2;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.add-goals-form__items-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.add-goals-form__item {
+    width: 100%;
+    min-height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.add-goals-form__item > input {
+    width: 80%;
+    height: 50px;
+    border: 3px solid #000;
+    border-radius: 10px;
+}
+
+.add-goals-item__label {
+    font-size: 18px;
+    width: 80%;
+    text-align: start;
+    color: #fff;
+    font-family: 'ComfortaaLight';
+}
+
+.add-goals__buttons {
+    height: 50px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.add-goals__buttons > button {
+    width: 300px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.add-goals-item__select {
+    width: 80%;
+    height: 50px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 16px;
+    text-indent: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 1em;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/57/57055.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    background-size: 20px;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.add-goals-item__textarea {
+    width: calc(80% - 20px);
+    height: 265px;
+    display: block;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 1em;
+    box-sizing: content-box;
+    outline: none;
+}
+
+#add-goals-form__textarea-label {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1302px) {
+    .add-goals-item__label {
+        font-size: 16px;
+    }
+
+    .add-goals-item__select {
+        font-size: 14px;
+    }
+
+    .add-goals__buttons > button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .add-goals {
+        height: 100vh;
+        justify-content: space-between;
+    }
+
+    .add-goals__title {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .add-goals__form {
+        width: 80%;
+        height: 65%;
+        justify-content: flex-start;
+        flex-direction: column;
+        overflow: scroll;
+        margin-top: 10px;
+    }
+
+    .add-goals-form__items-wrapper {
+        width: 100%;
+    }
+
+    .add-goals__buttons {
+        width: 100%;
+        min-height: 120px;
+        flex-direction: column-reverse;
+        margin: 10px 0;
+    }
+
+    .add-goals__buttons > button {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 532px) {
+    .add-goals__title {
+        width: 60%;
+        height: auto;
+        font-size: 26px;
+    }
+
+    .add-goals__form {
+        width: 90%;
+        border-radius: 15px;
+    }
+
+    .add-goals__buttons {
+        min-height: 100px;
+        margin: 8px 0;
+    }
+
+    .add-goals__buttons > button {
+        width: 80%;
+        height: 40px;
+        border: 2px solid #000;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+
+    .add-goals-form__item > input {
+        height: 40px;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .add-goals-form__item {
+        min-height: 70px;
+    }
+
+    .add-goals-item__select {
+        font-size: 12px;
+        height: 40px;
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .add-goals-item__textarea {
+        font-size: 12px;
+        border: 2px solid #000;
+        border-radius: 10px;
+    }
+
+    #add-goals-form__textarea-label {
+        margin-bottom: 10px;
+    }
+
+    .add-goals-item__label {
+        font-size: 12px;
+    }
+}

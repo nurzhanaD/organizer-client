@@ -1,0 +1,56 @@
+.link-btn {
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    text-shadow: none;
+    cursor: pointer;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+}
+
+.link-btn__title {
+    font-size: 16px;
+    font-family: 'ComfortaaLight';
+}
+
+.link-btn:hover {
+    text-shadow: 0 5px 0.2em #929292;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+}
+
+.link-btn:active {
+    text-shadow: none;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.2s;
+}
+
+.link-btn-secondary:hover {
+    text-shadow: 0 5px 0.2em #5383b4;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+}
+
+.link-btn-secondary:active {
+    text-shadow: none;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.2s;
+}
+
+.link-btn-tertiary:hover {
+    text-shadow: 0 5px 0.2em #81a3c5;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+}
+
+.link-btn-tertiary:active {
+    text-shadow: none;
+    text-decoration: underline;
+    transition-property: text-shadow;
+    transition-duration: 0.2s;
+}
