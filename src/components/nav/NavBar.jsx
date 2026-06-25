@@ -13,7 +13,7 @@ export function NavBar() {
         return localStorage.getItem('lastSignedInUser');
     }
 
-    axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getCurrentUserId()}`)
+    axios.get(`https://organizer-server.onrender.com/api/getUsers/${getCurrentUserId()}`)
     .then((res) => {
         setProfileImage(res.data.profile_image);
     });
