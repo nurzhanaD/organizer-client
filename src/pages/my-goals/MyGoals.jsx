@@ -42,12 +42,12 @@ export default function MyGoals() {
     useEffect(() => {
         let shortGoals = [];
         let longGoals = [];
-            axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+            axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
             .then((res) => { 
             if (activeShortGoal === true) {
                 const getShortGoal = async () => {
                     for(let i = 0; i < res.data.goals.length; i++) {
-                        await axios.get(`https://organizer-server-app.onrender.com/api/getGoals/${res.data.goals[i]}`)
+                        await axios.get(`https://organizer-server.onrender.com/api/getGoals/${res.data.goals[i]}`)
                         .then((res) => {
                             if(res.data._type === "short") {
                                 shortGoals.push(res.data);
@@ -73,7 +73,7 @@ export default function MyGoals() {
             if (activeLongGoal === true) {
                 const getLongGoal = async () => {
                     for(let i = 0; i < res.data.goals.length; i++) {
-                        await axios.get(`https://organizer-server-app.onrender.com/api/getGoals/${res.data.goals[i]}`)
+                        await axios.get(`https://organizer-server.onrender.com/api/getGoals/${res.data.goals[i]}`)
                         .then((res) => {
                             if (res.data._type === "long") {
                                 longGoals.push(res.data);
