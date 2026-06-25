@@ -17,7 +17,7 @@ export default function SignIn(props) {
     const [password, setPassword] = useState('');
     
     function signIn() {
-        axios.post('https://https://organizer-server.onrender.com/api/signInUser', {
+        axios.post('https://organizer-server.onrender.com/api/signInUser', {
             "email": email,
             "_password": password
         }).then((res) => {
