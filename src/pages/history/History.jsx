@@ -32,13 +32,13 @@ export default function History() {
         let tempJournalList = [];
         let tempNotesList = [];
         const getInfo = async () => {
-            await axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+            await axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
             .then((res) => {
                 info = res.data;
                 //getGoalsList
                 const getGoalsList = async () => {
                     for(let i = 0; i < info.goals.length; i++) {
-                        await axios.get(`https://organizer-server-app.onrender.com/api/getGoals/${info.goals[i]}`)
+                        await axios.get(`https://organizer-server.onrender.com/api/getGoals/${info.goals[i]}`)
                         .then((res) => {
                             if(res.data._date === val) {
                                 tempGoalsList.push(res.data);
@@ -60,7 +60,7 @@ export default function History() {
                 //getToDosList
                 const getToDosList = async () => {
                     for(let i = 0; i < info.to_do_s.length; i++) {
-                        await axios.get(`https://organizer-server-app.onrender.com/api/getToDos/${info.to_do_s[i]}`)
+                        await axios.get(`https://organizer-server.onrender.com/api/getToDos/${info.to_do_s[i]}`)
                         .then((res) => {
                             if(res.data._date === val) {
                                 if(res.data.is_completed === true) {
@@ -89,7 +89,7 @@ export default function History() {
                 //getJournalList
                 const getJournalList = async () => {
                     for(let i = 0; i < info.journal.length; i++) {
-                        await axios.get(`https://organizer-server-app.onrender.com/api/getJournal/${info.journal[i]}`)
+                        await axios.get(`https://organizer-server.onrender.com/api/getJournal/${info.journal[i]}`)
                         .then((res) => {
                             if(res.data._date === val) {
                                 tempJournalList.push(res.data);
@@ -111,7 +111,7 @@ export default function History() {
                 //getNotesList
                 const getNotesList = async () => {
                     for(let i = 0; i < info.notes.length; i++) {
-                        await axios.get(`https://organizer-server-app.onrender.com/api/getNotes/${info.notes[i]}`)
+                        await axios.get(`https://organizer-server.onrender.com/api/getNotes/${info.notes[i]}`)
                         .then((res) => {
                             if(res.data._date === val) {
                                 tempNotesList.push(res.data);
