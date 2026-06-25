@@ -16,7 +16,7 @@ export function AddToDoForm() {
     }
 
     function getToDos() {
-        axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+        axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
         .then((res) => {
             setUserToDos(res.data.to_do_s);
         });
@@ -24,7 +24,7 @@ export function AddToDoForm() {
 
     function addToDo() {
         const addToDoServer = async () => {
-            await axios.post(`https://organizer-server-app.onrender.com/api/addToDo`,{
+            await axios.post(`https://organizer-server.onrender.com/api/addToDo`,{
                 "to_do_content": to_do_content,
                 "is_completed": false,
                 "_date": dayjs().format('DD/MM/YYYY'),
@@ -33,7 +33,7 @@ export function AddToDoForm() {
             .then((res) => {
                 userToDos.push(res.data[0].to_do_id);
                 const addToDoUser = async () => {
-                    await axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getUserId()}`,
+                    await axios.put(`https://organizer-server.onrender.com/api/updateUser/${getUserId()}`,
                         {
                             "to_do_s" : userToDos
                         }
