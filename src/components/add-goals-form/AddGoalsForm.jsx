@@ -22,14 +22,14 @@ export function AddGoalsForm() {
         return localStorage.getItem('lastSignedInUser');
     }
 
-    axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+    axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
     .then((res) => {
         setUserGoals(res.data.goals);
     })
 
     function addGoal() {
         const addGoalServer = async () => 
-        await axios.post(`https://organizer-server-app.onrender.com/api/addGoal`, {
+        await axios.post(`https://organizer-server.onrender.com/api/addGoal`, {
             "which": which,
             "why": why,
             "how": how,
@@ -42,7 +42,7 @@ export function AddGoalsForm() {
         .then((res) => {
             userGoals.push(res.data[0].goal_id);
             const addToUserGoals = async () => 
-            await axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getUserId()}`,{
+            await axios.put(`https://organizer-server.onrender.com/api/updateUser/${getUserId()}`,{
                 "goals": userGoals
             })
             .then((res) => {
