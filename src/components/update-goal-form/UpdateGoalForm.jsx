@@ -16,7 +16,7 @@ export function UpdateGoalForm(props) {
     const [comment, setComment] = useState('');
 
     useEffect(() => {
-        axios.get(`https://organizer-server-app.onrender.com/api/getGoals/${props.id}`)
+        axios.get(`https://organizer-server.onrender.com/api/getGoals/${props.id}`)
         .then((res) =>{
             setWhich(res.data.which);
             setWhy(res.data.why);
@@ -29,7 +29,7 @@ export function UpdateGoalForm(props) {
 
     function updateGoalWhich() {
         const updateGoalServer = async () => 
-        await axios.put(`https://organizer-server-app.onrender.com/api/updateGoal/${props.id}`,
+        await axios.put(`https://organizer-server.onrender.com/api/updateGoal/${props.id}`,
         {
             "which": which,
             "why": why,
