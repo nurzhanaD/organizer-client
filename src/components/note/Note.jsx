@@ -11,7 +11,7 @@ export function Note(props) {
 
     function deleteNote(id) {
         const deleteFromUserNotes = async () => {
-            await axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+            await axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
             .then((res) => {
                 let temp = res.data.notes;
                 let userNotes = temp.filter((note) => {
@@ -19,13 +19,13 @@ export function Note(props) {
                 });
                 console.log(userNotes);
                 const deleteNoteServer = async () => 
-                await axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getUserId()}`,
+                await axios.put(`https://organizer-server.onrender.com/api/updateUser/${getUserId()}`,
                     {
                         "notes": userNotes
                     }
                 )
                 .then((res) => {
-                    axios.delete(`https://organizer-server-app.onrender.com/api/deleteNote/${id}`)
+                    axios.delete(`https://organizer-server.onrender.com/api/deleteNote/${id}`)
                     .then((res) => {
                         window.location.reload();
                     });
