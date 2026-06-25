@@ -18,11 +18,11 @@ export default function Notes() {
 
     useEffect(() => {
         let notes = [];
-        axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+        axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
         .then((res) => {
             const getNotes = async () => {
                 for (let i = 0; i < res.data.notes.length; i++) {
-                    await axios.get(`https://organizer-server-app.onrender.com/api/getNotes/${res.data.notes[i]}`)
+                    await axios.get(`https://organizer-server.onrender.com/api/getNotes/${res.data.notes[i]}`)
                     .then((res) => {
                         notes.push(res.data);
                         setUserNotes(notes.map((note, index) => {
@@ -42,11 +42,11 @@ export default function Notes() {
 
     function search(query) {
         let notes = [];
-        axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+        axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
         .then((res) => {
             const getNotes = async () => {
                 for (let i = 0; i < res.data.notes.length; i++) {
-                    await axios.get(`https://organizer-server-app.onrender.com/api/getNotes/${res.data.notes[i]}`)//eslint-disable-next-line 
+                    await axios.get(`https://organizer-server.onrender.com/api/getNotes/${res.data.notes[i]}`)//eslint-disable-next-line 
                     .then((res) => {
                         notes.push(res.data);
                     });
