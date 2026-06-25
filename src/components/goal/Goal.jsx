@@ -18,20 +18,20 @@ export function Goal(props) {
 
     function deleteGoal(goal_id) {
         const deleteFromUserGoals = async () => 
-        await axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+        await axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
         .then((res) => {
             let temp = res.data.goals;
             let userGoals = temp.filter((goal) => {
                 return goal !== goal_id
             });
             const deleteGoalServer = async () => 
-            await axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getUserId()}`,
+            await axios.put(`https://organizer-server.onrender.com/api/updateUser/${getUserId()}`,
                 {
                     "goals" : userGoals
                 }
             ).then((res) => {
                 console.log(res);
-                axios.delete(`https://organizer-server-app.onrender.com/api/deleteGoal/${goal_id}`)
+                axios.delete(`https://organizer-server.onrender.com/api/deleteGoal/${goal_id}`)
                 .then((res) => {
                     console.log(res.data);
                     window.location.reload();
