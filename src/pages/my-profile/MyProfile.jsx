@@ -28,7 +28,7 @@ export default function MyProfile() {
         return localStorage.getItem('lastSignedInUser');
     }
 
-    axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getCurrentUserId()}`)
+    axios.get(`https://organizer-server.onrender.com/api/getUsers/${getCurrentUserId()}`)
     .then((res) => {
         setUserFirstName(res.data.first_name);
         setUserLastName(res.data.last_name);
@@ -37,7 +37,7 @@ export default function MyProfile() {
     })
 
     function updateUserFirstName() {
-        axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getCurrentUserId()}`, {
+        axios.put(`https://organizer-server.onrender.com/api/updateUser/${getCurrentUserId()}`, {
             "first_name" : editFirstName.charAt(0).toUpperCase() + editFirstName.slice(1).toLowerCase()
         }).then((res) => {
             console.log(res.data);
@@ -47,7 +47,7 @@ export default function MyProfile() {
     }
 
     function updateUserLastName() {
-        axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getCurrentUserId()}`, {
+        axios.put(`https://organizer-server.onrender.com/api/updateUser/${getCurrentUserId()}`, {
             "last_name" : editLastName.charAt(0).toUpperCase() + editLastName.slice(1).toLowerCase()
         }).then((res) => {
             console.log(res.data);
@@ -57,7 +57,7 @@ export default function MyProfile() {
     }
 
     function updateUserProfileImageURL() {
-        axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getCurrentUserId()}`, {
+        axios.put(`https://organizer-server.onrender.com/api/updateUser/${getCurrentUserId()}`, {
             "profile_image" : editProfileImageURL
         }).then((res) => {
             console.log(res.data);
@@ -86,11 +86,11 @@ export default function MyProfile() {
 
     function deleteProfile() {
         const deleteCurrentUserElements = async () => {
-            await axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getCurrentUserId()}`)
+            await axios.get(`https://organizer-server.onrender.com/api/getUsers/${getCurrentUserId()}`)
             .then((res) => {
                 const deleteCurrentUserGoals = async () => {
                     for(let i = 0; i < res.data.goals.length; i++) {
-                        await axios.delete(`https://organizer-server-app.onrender.com/api/deleteGoal/${res.data.goals[i]}`)
+                        await axios.delete(`https://organizer-server.onrender.com/api/deleteGoal/${res.data.goals[i]}`)
                         .then((res) => {
                             console.log(res);
                         })
@@ -98,7 +98,7 @@ export default function MyProfile() {
                 }
                 const deleteCurrentUserToDos = async () => {
                     for(let i = 0; i < res.data.to_do_s.length; i++) {
-                        await axios.delete(`https://organizer-server-app.onrender.com/api/deleteToDo/${res.data.to_do_s[i]}`)
+                        await axios.delete(`https://organizer-server.onrender.com/api/deleteToDo/${res.data.to_do_s[i]}`)
                         .then((res) => {
                             console.log(res);
                         })
@@ -106,7 +106,7 @@ export default function MyProfile() {
                 }
                 const deleteCurrentUserJournal = async () => {
                     for(let i = 0; i < res.data.journal.length; i++) {
-                        await axios.delete(`https://organizer-server-app.onrender.com/api/deleteJournal/${res.data.journal[i]}`)
+                        await axios.delete(`https://organizer-server.onrender.com/api/deleteJournal/${res.data.journal[i]}`)
                         .then((res) => {
                             console.log(res);
                         })
@@ -114,7 +114,7 @@ export default function MyProfile() {
                 }
                 const deleteCurrentUserNotes = async () => {
                     for(let i = 0; i < res.data.notes.length; i++) {
-                        await axios.delete(`https://organizer-server-app.onrender.com/api/deleteNote/${res.data.notes[i]}`)
+                        await axios.delete(`https://organizer-server.onrender.com/api/deleteNote/${res.data.notes[i]}`)
                         .then((res) => {
                             console.log(res);
                         })
@@ -129,7 +129,7 @@ export default function MyProfile() {
         }
         deleteCurrentUserElements();
         const deleteCurrentUserProfile = async () => {
-            await axios.delete(`https://organizer-server-app.onrender.com/api/deleteUser/${getCurrentUserId()}`, {})
+            await axios.delete(`https://organizer-server.onrender.com/api/deleteUser/${getCurrentUserId()}`, {})
             .then((res) => {
                 console.log(res);
                 localStorage.setItem('lastSignedInUser', '');
