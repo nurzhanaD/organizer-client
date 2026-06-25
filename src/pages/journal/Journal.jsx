@@ -33,7 +33,7 @@ export default function Journal() {
 
     function saveJournal() {
         const addJournalToServer = async () => {
-            await axios.post(`https://organizer-server-app.onrender.com/api/addJournal`,{
+            await axios.post(`https://organizer-server.onrender.com/api/addJournal`,{
                 "q1": q1,
                 "q2": q2,
                 "q3": q3,
@@ -45,7 +45,7 @@ export default function Journal() {
             }).then((res) => {
                 userJournal.push(res.data[0].journal_id);
                 const addJournalToUser = async () => {
-                    await axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getUserId()}`, {
+                    await axios.put(`https://organizer-server.onrender.com/api/updateUser/${getUserId()}`, {
                         "journal": userJournal
                     })
                     .then((res) => {
@@ -61,10 +61,10 @@ export default function Journal() {
 
     function deleteJournal() {
         const deleteJournalServer = async () => {
-            await axios.delete(`https://organizer-server-app.onrender.com/api/deleteJournal/${todayJournalId}`)
+            await axios.delete(`https://organizer-server.onrender.com/api/deleteJournal/${todayJournalId}`)
             .then((res) => {
                 const deleteJournalUser = async () => {
-                    await axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getUserId()}`,{
+                    await axios.put(`https://organizer-server.onrender.com/api/updateUser/${getUserId()}`,{
                         "journal" : userJournal.filter((el) => {
                             return el !== todayJournalId
                         })
@@ -83,11 +83,11 @@ export default function Journal() {
     useEffect(() => {
         let temp = [];
         const getJournalPage = async () => {
-            await axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+            await axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
             .then((res) => {
                 setUserJournal(res.data.journal);
                 for(let i = 0; i < res.data.journal.length; i++) {
-                    axios.get(`https://organizer-server-app.onrender.com/api/getJournal/${res.data.journal[i]}`)
+                    axios.get(`https://organizer-server.onrender.com/api/getJournal/${res.data.journal[i]}`)
                     .then((res) => {
                         if (res.data._date === dayjs().format('DD/MM/YYYY')) {
                             temp.push(res.data);
@@ -119,7 +119,7 @@ export default function Journal() {
     }, [q1, q2, q3, q4, q5, my_day]);
 
     function updateJournal() {
-        axios.put(`https://organizer-server-app.onrender.com/api/updateJournal/${todayJournalId}`, {
+        axios.put(`https://organizer-server.onrender.com/api/updateJournal/${todayJournalId}`, {
             "q1": newQ1,
             "q2": newQ2,
             "q3": newQ3,
