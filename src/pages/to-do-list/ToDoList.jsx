@@ -17,11 +17,11 @@ export default function ToDoList() {
 
     useEffect(() => {
         let temp = [];
-        axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+        axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
         .then((res) => {
             const getToDo = async () => {
                 for (let i = 0; i < res.data.to_do_s.length; i++) {
-                    await axios.get(`https://organizer-server-app.onrender.com/api/getToDos/${res.data.to_do_s[i]}`)
+                    await axios.get(`https://organizer-server.onrender.com/api/getToDos/${res.data.to_do_s[i]}`)
                     .then((res) => {
                         temp.push(res.data);
                     })
