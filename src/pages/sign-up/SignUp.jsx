@@ -26,7 +26,7 @@ export default function SignUp() {
 
     function signUp() {
         if (firstName !== '' && lastName !== '' && email !== '' && password !== '') {
-            axios.post('https://organizer-server-app.onrender.com/api/addUser', {
+            axios.post('https://organizer-server.onrender.com/api/addUser', {
                 "first_name": firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase(),
                 "last_name": lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase(),
                 "email": email,
