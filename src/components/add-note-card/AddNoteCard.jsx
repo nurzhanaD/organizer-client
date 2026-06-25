@@ -16,14 +16,14 @@ export function AddNoteCard() {
         return localStorage.getItem('lastSignedInUser');
     }
 
-    axios.get(`https://organizer-server-app.onrender.com/api/getUsers/${getUserId()}`)
+    axios.get(`https://organizer-server.onrender.com/api/getUsers/${getUserId()}`)
     .then((res) => {
         setUserNotes(res.data.notes);
     });
 
     function addNote() {
         const addNoteServer = async () => 
-        await axios.post(`https://organizer-server-app.onrender.com/api/addNote`,
+        await axios.post(`https://organizer-server.onrender.com/api/addNote`,
             {
                 "note_content": noteContent,
                 "_date": dayjs().format('DD/MM/YYYY'),
@@ -33,7 +33,7 @@ export function AddNoteCard() {
         .then((res) => {
             userNotes.push(res.data[0].note_id);
             const addToUserNotes = async () => {
-                await axios.put(`https://organizer-server-app.onrender.com/api/updateUser/${getUserId()}`,
+                await axios.put(`https://organizer-server.onrender.com/api/updateUser/${getUserId()}`,
                     {
                         "notes" : userNotes
                     }
